@@ -1,0 +1,29 @@
+.btn {
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  border: 0;
+  outline: none;
+  border-radius: 0.5rem;
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-primary {
+    background-color: $primary;
+    color: #fff;
+  }
+  &-secondary {
+    background-color: $secondary;
+    color: #fff;
+  }
+  &-black {
+    background-color: black;
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

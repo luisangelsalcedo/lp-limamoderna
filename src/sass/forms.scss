@@ -1,0 +1,22 @@
+.form {
+  &-control {
+    input {
+      font-size: 1.05rem;
+      display: block;
+      width: 100%;
+      border: 0;
+      outline: none;
+      padding: 0.6rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__legal {
+    padding: 0 0 1rem 0;
+  }
+}
+
+.iframe-hidden {
+  display: none;
+}

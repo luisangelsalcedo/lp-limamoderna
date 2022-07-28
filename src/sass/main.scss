@@ -1,0 +1,363 @@
+@import "./default.scss";
+@import "./layout.scss";
+@import "./colors.scss";
+@import "./titles.scss";
+@import "./buttons.scss";
+@import "./forms.scss";
+
+.section {
+  text-align: center;
+
+  .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  &1 {
+    background-color: #000;
+    background-size: cover;
+    background-position: -2rem 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      z-index: 1;
+    }
+
+    .header-main,
+    .form {
+      position: relative;
+      z-index: 10;
+    }
+    .header-main {
+      color: #fff;
+      padding-bottom: 3rem;
+      text-shadow: 0 0 5px rgba($color: black, $alpha: 1);
+    }
+  }
+
+  &3 {
+    background-size: 100rem;
+    background-position: center center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      color: #fff;
+    }
+  }
+  &6 {
+    .container {
+      padding: 0;
+    }
+  }
+  &8 {
+    background-color: black;
+    .container {
+      padding: 0;
+    }
+  }
+}
+.logo {
+  svg {
+    width: 10rem;
+    margin: 1rem 0;
+    fill: #fff;
+  }
+}
+
+.form {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba($color: black, $alpha: 0.8);
+  color: #fff;
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__response {
+    a {
+      color: #fff;
+      text-underline-offset: 0.3rem;
+    }
+  }
+
+  &__legal {
+    a {
+      color: #fff;
+      text-underline-offset: 0.3rem;
+    }
+  }
+}
+
+.gallery {
+  &-card {
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0.2rem auto;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+
+    &:hover a {
+      background-color: rgba($color: #000000, $alpha: 0.8);
+    }
+
+    &:hover a i {
+      transition-delay: 0.2s;
+      opacity: 1;
+    }
+
+    a {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      text-decoration: none;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      transition: background 0.2s ease;
+
+      i {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+      }
+    }
+  }
+}
+
+.video {
+  a {
+    box-shadow: 0 0 10px #000;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    overflow: hidden;
+
+    i {
+      border: solid 0.4rem #fff;
+      font-size: 2rem;
+      width: 6rem;
+      height: 6rem;
+      padding-left: 0.5rem;
+      border-radius: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: absolute;
+      text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.5);
+      box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.5);
+      transform: scale(1);
+      transition: transform 0.2s ease;
+    }
+
+    &:hover i {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 120%;
+      height: auto;
+    }
+  }
+}
+
+.features-list {
+  &__item {
+    text-align: left;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: solid 1px #ddd;
+    display: flex;
+    align-items: center;
+    i {
+      padding-right: 1rem;
+      flex-shrink: 0;
+      color: rgba($color: #000000, $alpha: 0.5);
+    }
+    span {
+      flex: 1;
+    }
+  }
+}
+
+.team {
+  &-portada {
+    margin-bottom: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  &-list {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f8f8;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+    }
+    &__image {
+      width: 10rem;
+      height: 10rem;
+      overflow: hidden;
+      border-radius: 15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    &__fullname {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+    }
+    &__label {
+      margin-top: 0.3rem;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    &__bio {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.location {
+  & > div {
+    height: 25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: #fff;
+  }
+  & > div:last-child {
+    background-color: black;
+  }
+
+  &__title {
+    margin-top: 1.1rem;
+    font-size: 1.4rem;
+  }
+  &__sub {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  .gallery-card {
+    width: 100%;
+    margin: 0;
+
+    img {
+      min-height: 100%;
+      min-width: auto;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.credits {
+  &-item {
+    padding: 1.5rem;
+
+    &__logo {
+      position: relative;
+
+      img {
+        width: 13rem;
+      }
+
+      &::after {
+        content: "";
+        position: relative;
+        display: block;
+        width: 6rem;
+        height: 0.15rem;
+        margin: 1rem auto 1rem auto;
+        background-color: black;
+      }
+    }
+
+    &__title {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #777;
+    }
+  }
+}
+.info {
+  padding: 2rem;
+  color: white;
+  &-list {
+    text-align: left;
+    &__item {
+      margin-bottom: 0.3rem;
+      font-weight: 200;
+      b {
+        font-weight: bold;
+      }
+    }
+  }
+
+  hr {
+    margin: 2rem auto;
+  }
+  &-legal {
+    font-size: 0.8rem;
+    text-align: justify;
+    font-weight: 200;
+    b {
+      font-weight: bold;
+    }
+  }
+}
+.fp-watermark {
+  display: none;
+}
+@import "./responsive.scss";
